@@ -1,0 +1,15 @@
+{
+  "name": "seleniumtest",
+  "version": "0.0.0",
+  "description": "selenium test",
+  "main": "test.js",
+  "dependencies": {
+    "webdriverio": "~4.0.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jean Pasqualini",
+  "license": "BSD-2-Clause"
+}
