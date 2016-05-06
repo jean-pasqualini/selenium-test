@@ -1,0 +1,39 @@
+#!/usr/bin/node
+
+var webdriverio = require('webdriverio');
+var options = { desiredCapabilities: { browserName: 'chrome' } };
+var client = webdriverio.remote(options);
+var configDriver = require('./driver/by_config');
+
+client = client.init();
+
+if(process.argv.length < 3)
+{
+    console.log('source ?');
+    process.exit();
+}
+
+source = process.argv[2].split('#');
+
+kernelDir = require('path').dirname(require.main.filename);
+
+var driverCollection = [
+    new configDriver(client)
+];
+
+driverCollection.forEach(function(driver)
+{
+    console.log('=====> ' + driver.getName());
+
+    if(driver.isSupported(source[0]))
+    {
+        console.log(' supported ! ');
+
+        driver.execute(source[1]);
+    }
+    else {
+        console.log(' Not supported ! ');
+    }
+});
+
+client.end();

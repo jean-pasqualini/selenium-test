@@ -1,0 +1,17 @@
+[
+  {
+    "url" : "http://www.laposte.fr/particulier/outils/calculateur-de-tarif",
+    "steps" : [
+      {
+        "type" : "click",
+        "element" : "=Démarrer",
+        "wait" : 2000
+      },
+      {
+        "type" : "click",
+        "element" : "=Autre",
+        "wait" : 2000
+      }
+    ]
+  }
+]

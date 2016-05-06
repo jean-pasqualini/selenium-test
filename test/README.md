@@ -6,3 +6,4 @@ http://webdriver.io/guide/getstarted/install.html
 2. npm install selenium-standalone@latest -g
 3. selenium-standalone install
 4. selenium-standalone start
+5. ./run json#scenarios/calculateur-tarifs.json
